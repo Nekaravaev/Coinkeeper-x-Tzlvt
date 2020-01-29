@@ -20,4 +20,9 @@ echo (new Coinkeeper(
      'budget' => 1200,
      'cookies' => '_SCREEN_RESOLUTION=1680x1027;']
 ))->calculate();
+
+//Total: -55.35 Available: -85.3
 ```
+
+Данные о user_id и cookies легче всего взять из веб-версии коинкипера, отследив запросы удобным способом.
+
