@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="http://schema.phpunit.de/4.8/phpunit.xsd"
+        bootstrap="./tests/bootstrap.php"
+        backupGlobals="false"
+        backupStaticAttributes="false"
+        colors="true"
+        convertErrorsToExceptions="true"
+        convertNoticesToExceptions="true"
+        convertWarningsToExceptions="true"
+        processIsolation="false"
+        stopOnError="false"
+        stopOnFailure="false"
+        stopOnIncomplete="false"
+        stopOnSkipped="false"
+        timeoutForLargeTests="60"
+        timeoutForMediumTests="10"
+        timeoutForSmallTests="1"
+        verbose="false"
+>
+    <php>
+        <ini name="error_reporting" value="-1"/>
+        <const name="PHPUNIT_COOKIES" value=""/>
+        <const name="PHPUNIT_USER_ID" value=""/>
+    </php>
+    <testsuites>
+        <testsuite name="Package Test Suite">
+            <directory>./tests/</directory>
+        </testsuite>
+    </testsuites>
+    <filter>
+        <whitelist>
+            <directory suffix=".php">./src/Coinkeeper</directory>
+            <exclude>
+                <directory suffix=".php">./src/Coinkeeper/Exceptions</directory>
+            </exclude>
+        </whitelist>
+    </filter>
+</phpunit>
