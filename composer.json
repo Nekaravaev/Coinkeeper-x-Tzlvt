@@ -1,0 +1,19 @@
+{
+    "name": "nekaravaev/coinkeeper-tlg",
+    "description": "Tzlvt to coinkeeper.",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andrew Moiseenko",
+            "email": "nekaravaev@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "rmccue/requests": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {"Nekaravaev\\": "src/"}
+    }
+}

@@ -1,0 +1,5 @@
+src/Coinkeeper/config/*
+vendor/
+node_modules/
+.DS_Store
+.idea
