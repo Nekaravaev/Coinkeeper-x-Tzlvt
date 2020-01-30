@@ -1,4 +1,4 @@
-name: PHP Composer
+name: Composer & Tests
 
 on: [push]
 
@@ -17,4 +17,4 @@ jobs:
       run: composer install --prefer-dist --no-progress --no-suggest
 
     - name: Run test suite
-      run: PHPUNIT_USER_ID=${{secrets.PHPUNIT_USER_ID}} PHPUNIT_COOKIES=${{secrets.PHPUNIT_COOKIES}} vendor/bin/phpunit --configuration phpunit.xml.dist
+      run: PHPUNIT_USER_ID="${{secrets.PHPUNIT_USER_ID}}" PHPUNIT_COOKIES="${{secrets.PHPUNIT_COOKIES}}" vendor/bin/phpunit --configuration phpunit.xml.dist
