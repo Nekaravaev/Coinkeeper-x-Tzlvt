@@ -23,6 +23,8 @@
         <ini name="error_reporting" value="-1"/>
         <const name="PHPUNIT_COOKIES" value=""/>
         <const name="PHPUNIT_USER_ID" value=""/>
+        <env name="PHPUNIT_USER_ID" value=""/>
+        <env name="PHPUNIT_COOKIES" value=""/>
     </php>
     <testsuites>
         <testsuite name="Package Test Suite">

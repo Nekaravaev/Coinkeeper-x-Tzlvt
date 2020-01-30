@@ -14,8 +14,8 @@ class CoinkeeperTest extends TestCase
     protected function setUp(): void
     {
         $this->valid_credentials =  [
-            'user_id'  => PHPUNIT_USER_ID,
-            'cookies'  => PHPUNIT_COOKIES,
+            'user_id'  => (!empty(PHPUNIT_USER_ID) ? PHPUNIT_USER_ID : ( !empty($_ENV['PHPUNIT_USER_ID']) ? $_ENV['PHPUNIT_USER_ID'] : '') ),
+            'cookies'  => (!empty(PHPUNIT_COOKIES) ? PHPUNIT_COOKIES : ( !empty($_ENV['PHPUNIT_COOKIES']) ? $_ENV['PHPUNIT_COOKIES'] : '') ),
             'budget'   => 1000
         ];
 

@@ -25,6 +25,7 @@
         "phpunit/phpunit": "8.5.x-dev"
     },
     "scripts": {
-        "test": "\"vendor/bin/phpunit\""
+        "test": "\"vendor/bin/phpunit\"",
+        "test_ci": "\"PHPUNIT_USER_ID=${{secrets.PHPUNIT_USER_ID}} PHPUNIT_COOKIES=${{secrets.PHPUNIT_COOKIES}} vendor/bin/phpunit --configuration phpunit.xml.dist\""
     }
 }
