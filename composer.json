@@ -11,7 +11,8 @@
     ],
     "minimum-stability": "dev",
     "require": {
-        "rmccue/requests": "dev-master"
+        "rmccue/requests": "dev-master",
+        "irazasyed/telegram-bot-sdk": "^2.0"
     },
     "autoload": {
         "psr-4": {"Nekaravaev\\": "src/"}
