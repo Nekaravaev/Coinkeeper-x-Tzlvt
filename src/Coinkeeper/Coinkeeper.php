@@ -123,7 +123,15 @@ class Coinkeeper {
         return $money_left / $days_left;
     }
 
-    public function calculate() {
+    /**
+     * Returns total amount available for spending today without today's transactions
+     * and amount of available money for spending right at the moment
+     *
+     * @var boolean $return_array return calculate result as array
+     * @return array | boolean
+     * @throws CoinkeeperException
+     */
+    public function calculate( $return_array = false ) {
         $pingResponse = $this->ping();
         $transactions = $this->transactions();
 
@@ -137,7 +145,10 @@ class Coinkeeper {
 
         $totalAvailableToday = $this->totalToday($pingResponse, $diff);
         $availableNow        = $totalAvailableToday - $diff;
-        return "Total: $totalAvailableToday Available: $availableNow";
+        if ( $return_array )
+            return ['total_today' => $totalAvailableToday, 'available_now' => $availableNow];
+
+        return "Сегодняшняя сумма без учета существующих транзакций: $totalAvailableToday; Доступно для траты сейчас: $availableNow";
     }
 
 }
